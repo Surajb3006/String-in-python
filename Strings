@@ -1,0 +1,30 @@
+Q1)771. Jewels and Stones
+You're given strings jewels representing the types of stones that are jewels, and stones representing the stones you have. Each character in stones is a type of stone you have. You want to know how many of the stones you have are also jewels.
+Letters are case sensitive, so "a" is considered a different type of stone from "A".
+Example 1:
+Input: jewels = "aA", stones = "aAAbbbb"
+Output: 3
+Sol)
+class Solution:
+    def numJewelsInStones(self, J: str, S: str) -> int:
+        counter = 0
+        jewels = set(J) # search in a set is instant - O(1)
+        for stone in S:
+            if stone in jewels:
+                counter += 1
+        return counter
+Q2)
+Sol)
+class Solution:
+    
+
+    def interpret(self,s):
+        mapped = {'G':'G','()':'o','(al)':'al'}
+        tmp = ''
+        res = ''
+        for i in s:
+            tmp += i
+            if tmp in mapped:
+                res += mapped[tmp]
+                tmp = ''
+        return res
