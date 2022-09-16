@@ -185,4 +185,18 @@ class Solution:
             elif '|' in lst and i=='|': 
                 lst.pop() 
         return lst.count('*')
-Q9)
+Q9)Given a string s, return the string after replacing every uppercase letter with the same lowercase letter.
+Example 1:
+Input: s = "Hello"
+Output: "hello"
+Sol)
+class Solution:
+    def toLowerCase(self, s: str) -> str:
+        ans = ""
+        for c in s:
+            n = ord(c)
+            if n > 64 and n < 91:
+                ans += chr(n+32)
+            else:
+                ans+=c
+        return ans
