@@ -214,3 +214,16 @@ class Solution:
         if len(a)==26:
             return True
         return False
+Q11)557. Reverse Words in a String III
+Given a string s, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
+Example 1:
+Input: s = "Let's take LeetCode contest"
+Output: "s'teL ekat edoCteeL tsetnoc"
+Sol)
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        l = s.split(' ')
+        for x in range(len(l)):
+            l[x] = l[x][::-1]
+        return ' '.join(l)
+
