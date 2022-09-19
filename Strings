@@ -324,8 +324,32 @@ class Solution:
                 basket = ''
                 
         return res
-	
-	
-	
-	
-Q1
+Q15)557. Reverse Words in a String III
+Given a string s, reverse the order of characters in each word within a sentence while still preserving whitespace and initial word order.
+Example 1:
+Input: s = "Let's take LeetCode contest"
+Output: "s'teL ekat edoCteeL tsetnoc"
+Example 2:
+Input: s = "God Ding"
+Output: "doG gniD"
+Sol)
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        l = s.split(' ')
+        for x in range(len(l)):
+            l[x] = l[x][::-1]
+        return ' '.join(l)
+Q16)1309. Decrypt String from Alphabet to Integer Mapping
+You are given a string s formed by digits and '#'. We want to map s to English lowercase characters as follows:
+Characters ('a' to 'i') are represented by ('1' to '9') respectively.
+Characters ('j' to 'z') are represented by ('10#' to '26#') respectively.
+Return the string formed after mapping.
+The test cases are generated so that a unique mapping will always exist.
+Example 1:
+Input: s = "10#11#12"
+Output: "jkab"
+Explanation: "j" -> "10#" , "k" -> "11#" , "a" -> "1" , "b" -> "2".
+Example 2:
+Input: s = "1326#"
+Output: "acz"
+Sol)
