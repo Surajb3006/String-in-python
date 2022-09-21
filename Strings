@@ -512,4 +512,45 @@ class Solution:
         elif c[0] in 'bdfh':
             return int(c[1])%2==1
         return False
+Q23)2351. First Letter to Appear Twice
+Given a string s consisting of lowercase English letters, return the first letter to appear twice.
+A letter a appears twice before another letter b if the second occurrence of a is before the second occurrence of b.
+s will contain at least one letter that appears twice.
+Example 1:
+Input: s = "abccbaacz"
+Output: "c"
+Explanation:
+The letter 'a' appears on the indexes 0, 5 and 6.
+The letter 'b' appears on the indexes 1 and 4.
+The letter 'c' appears on the indexes 2, 3 and 7.
+The letter 'z' appears on the index 8.
+The letter 'c' is the first letter to appear twice, because out of all the letters the index of its second occurrence is the smallest.        
+Sol)
+class Solution:
+    def repeatedCharacter(self, s: str) -> str:
         
+        setS = set()
+
+        for x in s:
+            if x in setS:
+                return x
+            else:
+                setS.add(x)
+ Q24)1941. Check if All Characters Have Equal Number of Occurrences
+Given a string s, return true if s is a good string, or false otherwise.
+A string s is good if all the characters that appear in s have the same number of occurrences (i.e., the same frequency).
+Example 1:
+Input: s = "abacbc"
+Output: true
+Explanation: The characters that appear in s are 'a', 'b', and 'c'. All characters occur 2 times in s.       
+Sol)
+class Solution:
+    def areOccurrencesEqual(self, s: str) -> bool:
+        a = set(s)
+        d = set()
+        for i in a:
+            d.add(s.count(i))
+        if len(d) == 1:
+            return True
+        else:
+            False
