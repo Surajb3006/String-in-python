@@ -883,3 +883,13 @@ Explanation:
 - "is" appears in each of the two arrays, but there are 2 occurrences of it in words1. We do not count this string.
 - "as" appears once in words1, but does not appear in words2. We do not count this string.
 Thus, there are 2 strings that appear exactly once in each of the two arrays.
+Sol)
+class Solution:
+    def countWords(self, words1: List[str], words2: List[str]) -> int:
+        c1=Counter(words1)
+        c2=Counter(words2)
+        c=0
+        for i in words1:
+            if i in words2 and c1[i]==c2[i]==1:
+                c+=1
+        return c
